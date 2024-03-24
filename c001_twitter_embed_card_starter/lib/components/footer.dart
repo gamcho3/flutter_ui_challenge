@@ -16,7 +16,10 @@ class Footer extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(DateFormat('HH:mm a · MMM dd, yyyy').format(DateTime.now())),
+            Text(
+              DateFormat('HH:mm a · MMM dd, yyyy').format(DateTime.now()),
+              style: TextStyle(color: Colors.grey.shade700),
+            ),
             SvgIcon(
               asset: SvgAsset.info,
               width: 20,
