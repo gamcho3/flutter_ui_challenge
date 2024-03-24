@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_embed_card/components/underline_text_button.dart';
 import 'package:twitter_embed_card/svg_asset.dart';
 import 'package:twitter_embed_card/svg_icon.dart';
 
@@ -9,7 +10,7 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
@@ -26,9 +27,8 @@ class Header extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      "Andrea Bizzotto",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    UnderlineTextButton(
+                      title: "Andrea Bizzotto",
                     ),
                     SizedBox(
                       width: 5,
@@ -64,7 +64,10 @@ class Header extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    UnderlineTextButton()
+                    UnderlineTextButton(
+                      title: 'Follow',
+                      color: Colors.blue,
+                    )
                   ],
                 ),
               ],
@@ -73,47 +76,6 @@ class Header extends StatelessWidget {
         ),
         SvgIcon(asset: SvgAsset.x)
       ],
-    );
-  }
-}
-
-class UnderlineTextButton extends StatefulWidget {
-  const UnderlineTextButton({
-    super.key,
-  });
-
-  @override
-  State<UnderlineTextButton> createState() => _UnderlineTextButtonState();
-}
-
-class _UnderlineTextButtonState extends State<UnderlineTextButton> {
-  var textline = TextDecoration.none;
-
-  @override
-  Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      // onHover: (event) {
-      //   print(event);
-      // },
-      onEnter: (event) {
-        print(event);
-        setState(() {
-          textline = TextDecoration.underline;
-        });
-      },
-      onExit: (event) {
-        setState(() {
-          textline = TextDecoration.none;
-        });
-      },
-      child: Text(
-        "Follow",
-        style: TextStyle(
-            color: Colors.blue,
-            fontWeight: FontWeight.bold,
-            decoration: textline),
-      ),
     );
   }
 }
