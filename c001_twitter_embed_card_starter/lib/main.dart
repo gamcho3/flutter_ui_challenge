@@ -22,9 +22,9 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme:
           ThemeData(useMaterial3: true, primaryColor: Colors.purple.shade200),
-      home: Scaffold(
+      home: const Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: EdgeInsets.symmetric(horizontal: 16),
           // Use Center as layout has unconstrained width (loose constraints),
           // together with SizedBox to specify the max width (tight constraints)
           // See this thread for more info:
@@ -33,7 +33,7 @@ class MainApp extends StatelessWidget {
             child: SizedBox(
               width: 600, // max allowed width
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: TwitterEmbedCard(),
               ),
             ),
