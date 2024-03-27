@@ -117,7 +117,7 @@ class CountdownAndRestartState extends State<CountdownAndRestart>
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 50,
-                  color: Color.fromARGB(255, 117, 34, 132)),
+                  color: Color.fromARGB(255, 102, 16, 117)),
             ),
           ],
         )),
