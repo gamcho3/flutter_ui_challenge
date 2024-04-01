@@ -104,7 +104,7 @@ class CountdownAndRestartState extends State<CountdownAndRestart>
                 width: 200,
                 height: 200,
                 child: CircularProgressIndicator(
-                  strokeWidth: 15,
+                  strokeWidth: 20,
                   value: _controller.value,
                   backgroundColor: Colors.deepPurple,
                   valueColor: const AlwaysStoppedAnimation(
@@ -117,7 +117,7 @@ class CountdownAndRestartState extends State<CountdownAndRestart>
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 50,
-                  color: Color.fromARGB(255, 117, 34, 132)),
+                  color: Color.fromARGB(255, 102, 16, 117)),
             ),
           ],
         )),
