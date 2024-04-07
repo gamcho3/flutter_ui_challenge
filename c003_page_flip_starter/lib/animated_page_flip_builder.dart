@@ -32,7 +32,7 @@ class AnimatedPageFlipBuiler extends StatelessWidget {
           final rotationAngle =
               animation.value > 0.5 ? pi - rotationValue : rotationValue;
 
-          // matrix4의 값을 수정
+          // matrix4의 값을 수정...
           var tilt = (animation.value - 0.5).abs() - 0.5;
           tilt *= isHalf ? -0.003 : 0.003;
           return Transform(
