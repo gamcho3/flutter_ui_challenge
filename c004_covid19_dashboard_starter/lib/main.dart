@@ -31,11 +31,13 @@ class _MainAppState extends State<MainApp> {
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    // print(_themeMode.name);
+
+    bool isDark = _themeMode.name == 'dark' ? true : false;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: _themeMode,
-      theme: ThemeData(brightness: Brightness.light),
+      theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       home: Scaffold(
         appBar: AppBar(
@@ -53,7 +55,7 @@ class _MainAppState extends State<MainApp> {
               child: Column(
                 children: [
                   Switch(
-                      value: isDarkMode,
+                      value: isDark,
                       onChanged: (value) {
                         setState(() {
                           value
